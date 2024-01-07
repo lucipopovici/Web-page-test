@@ -20,3 +20,8 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
+// Catch-all route for testing
+app.all('*', (req, res) => {
+    res.send("Catch-all response. Path: " + req.path);
+});
