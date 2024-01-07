@@ -7,9 +7,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.post('/submit', (req, res) => {
+    res.send("Simple test response from /submit");
+});
+
+/*app.post('/submit', (req, res) => {
     console.log(req.body.message); // Log the message from the form
     res.send("Received your message: " + req.body.message); // Send a response
-});
+});*/
 
 // Listen to the correct port
 const port = process.env.PORT || 3000;
